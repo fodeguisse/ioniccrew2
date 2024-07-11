@@ -1,0 +1,43 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Ionic</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="main">
+  <ion-searchbar class="search" [(ngModel)]="desiredItem" (ionInput)="filterItems()" placeholder="Recherche" #searchBar></ion-searchbar>
+  <div class="inputValue">
+    <p>{{inputValue}}</p>
+  </div>
+
+  <div class="tabeau">
+    <h2>Directives </h2>
+    <ul>
+      <li *ngFor="let item of foundItems">{{item.directive}}</li>
+    </ul>
+    
+  </div>
+  <!-- <div class="tabeau">
+    <h2>Tableau trié : </h2>
+    <ul>
+      <li *ngFor="let item of sortedTable">{{item}}</li>
+    </ul>
+     
+  </div>-->
+
+  <!-- <div class="button" *ngIf ="showButton">
+    <ion-button class="bg-gray-100" (click)="showSortingTable()">Trier</ion-button>
+  </div> -->
+
+  <br>
+
+  
+  <div class="saisie">
+    <ion-label class="label">Directives</ion-label>
+    <ion-input type="text" class="input" [(ngModel)]="inputValue"></ion-input>
+  </div>
+  <!-- <div class="button" *ngIf="addButton">
+    <ion-button class="bg-gray-100" (click)="addValueToTable()">Ajouter à la liste</ion-button>
+  </div>
+   -->
+</ion-content>

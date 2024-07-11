@@ -12,5 +12,4 @@ import { ExploreContainerComponent } from '../explore-container/explore-containe
 export class Tab2Page {
 
   constructor() {}
-
 }
